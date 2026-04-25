@@ -1,0 +1,134 @@
+:root{
+    --primary-color: #225324;
+    --secondary-color: #96c65a;
+    --third-color: #a26666;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: bolder;
+}
+
+header .logo span{
+    color:var(--secondary-color);
+}
+
+header .navbar a{
+    font-size: 1.2rem;
+    padding:0 1.5rem;
+    color: #7b7b7b;
+}
+
+header .navbar a:hover{
+    color: var(--primary-color);
+}
+
+header .icons a{
+    font-size: 1.5rem;
+    color: #7b7b7b;
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: var(--primary-color)
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fas.fa-bars{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border:.1rem solid rgba(0,0,0,.3)
+    display none;
+}
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+    font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border:.1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+    header #toggler:checked ~ .navbar{
+        max-height: 40rem;
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+    font-size: 50%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
