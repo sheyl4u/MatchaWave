@@ -336,28 +336,6 @@ product start
         font-size: 3rem;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 header{
     padding: 2rem;
 }
@@ -395,48 +373,63 @@ header{
     line-height: 1.5;
 }
 
-
-
-.footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
 }
 
-.footer .box-container .box{
-    flex:1 1 25rem;
+/* --- FOOTER SECTION START --- */
+.footer {
+    background: #fcfcfc; /* Warna background netral */
+    border-top: .1rem solid rgba(0,0,0,.1);
+    padding: 3rem 9%; /* Memberi ruang di sisi kiri & kanan */
 }
 
-.footer .box-container .box h3{
-    color: #225324;
-    font-size: 2.5rem;
-    padding:1rem 0;
+.footer .box-container {
+    display: grid;
+    /* Ubah dari 23rem ke 18rem agar kolom lebih ramping */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
+    gap: 1.5rem; /* Jarak antar box diperkecil */
 }
 
-.footer .box-container .box a{
+.footer .box-container .box h3 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    padding: 1.5rem 0;
+    font-weight: bold;
+}
+
+.footer .box-container .box a {
     display: block;
-    color: #225324;
+    color: #555;
     font-size: 1.5rem;
-    padding:1rem 0;
+    padding: 1rem 0;
+    transition: all .3s ease;
 }
 
-.footer .box-container .box a:hover{
-    color:var(--primary-color) 
+/* Efek saat link di-hover */
+.footer .box-container .box a:hover {
+    color: var(--secondary-color);
+    padding-left: 1rem; /* Efek geser kecil */
+    text-decoration: underline;
 }
 
-.footer .box-container .box img{
-    margin-top: 1rem;
-}
-
-.footer .credit{
+.footer .credit {
     text-align: center;
-    padding:1.5rem;
-    margin-top: 1.5rem;
-    padding-top: 2.5rem;
-    font-size: 2rem;
-    color:#225324;
+    padding: 2.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
     border-top: .1rem solid rgba(0,0,0,.1);
 }
-.footer .credit span{
-    color: #5b7e30;
+
+.footer .credit span {
+    color: var(--secondary-color);
+    font-weight: bold;
 }
+
+/* Responsif untuk layar Tablet/HP agar tidak sempit */
+@media (max-width: 768px) {
+    .footer .box-container {
+        /* Otomatis menyesuaikan kolom jika layar mengecil */
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+}
+/* --- FOOTER SECTION END --- */
