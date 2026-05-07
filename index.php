@@ -2,7 +2,7 @@
 <html>
 <head>
 <script src="https://app.sandbox.midtrans.com/snap/snap.js"
-data-client-key="ADALAH POKOKNYA"></script>
+data-client-key="Mid-client-_4-QMLHAwzVUVfC_"></script>
 </head>
 
 <body>
