@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8d967c78673fb4b6c69efdbc6b7fb77f702fdbfc
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -10,4 +14,8 @@ if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
+<<<<<<< HEAD
+echo "hello";
+=======
 echo "DB CONNECTED";
+>>>>>>> 8d967c78673fb4b6c69efdbc6b7fb77f702fdbfc

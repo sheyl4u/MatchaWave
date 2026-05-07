@@ -216,11 +216,49 @@ product start
     padding: 1.5rem;
     text-align: center;
 }
-product end
 
+.contact .row {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+}
 
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+}
 
+.contact .row form {
+    flex: 1 1 40rem;
+}
 
+.contact .row form {
+    width: 100%;
+}
+
+.contact .row form .box {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.contact .row form .box:focus {
+    border-color: var(--green);
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
 
 
 
@@ -288,7 +326,7 @@ product end
     }
 }
 
-/* @media (max-width:450px){
+@media (max-width:450px){
 
     html{
     font-size: 50%;
@@ -297,7 +335,7 @@ product end
     .heading{
         font-size: 3rem;
     }
- */
+
 
 
 
@@ -356,6 +394,8 @@ header{
     padding: 1rem 0;
     line-height: 1.5;
 }
+
+
 
 .footer .box-container{
     display: flex;
