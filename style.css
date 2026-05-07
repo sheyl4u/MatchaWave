@@ -53,6 +53,7 @@ section{
     background: var(--secondary-color);
 }
 
+
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -114,6 +115,7 @@ header{
         padding: 2rem;
     }
 
+
 .home{
     display: flex;
     align-items: center;
@@ -146,6 +148,7 @@ header{
     padding: 1rem 0;
     line-height: 1.5;
 }
+
 
 .about .row{
     display: flex;
@@ -198,9 +201,15 @@ header{
     line-height: 1.5;
 }
 
-icons
 
-product start
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+}
+
 .products .box-container{
     display: flex;
     gap: 1.5rem;
@@ -218,11 +227,6 @@ product start
 }
 
 product end
-
-
-
-
-
 
 
 
@@ -478,4 +482,5 @@ header{
 }
 .footer .credit span{
     color: #5b7e30;
+}
 }
