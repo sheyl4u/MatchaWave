@@ -5,31 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Matcha Wave</title>
 
-    <link rel="stylesheet" href="style.css">
+    <form action="proses_login.php" method="POST"></form>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background: #dff5e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box{
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: green;
+            color: white;
+            border: none;
+        }
+
+    </style>
 </head>
 <body>
 
-    <div class="login-box">
-        <h2>Matcha Wave Cafe 🍵</h2>
+<div class="login-box">
 
-        <form action="login.php" method="POST">
+    <h2>Login</h2>
 
-            <input type="text"
-            name="username"
-            placeholder="Username"
-            required>
+    <form action="proses_login.php" method="POST">
 
-            <input type="password"
-            name="password"
-            placeholder="Password"
-            required>
+        <input type="text" 
+        name="username" 
+        placeholder="Username" 
+        required>
 
-            <button type="submit">
-                Login
-            </button>
+        <input type="password" 
+        name="password" 
+        placeholder="Password" 
+        required>
 
-        </form>
-    </div>
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+</div>
 
 </body>
 </html>

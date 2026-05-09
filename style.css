@@ -195,20 +195,48 @@ header{
 
 .about .row .content p{
     font-size: 1.5rem;
-    color: #ffffff;
+    color: var(--secondary-color);
     padding: 1rem 0;
     padding-top: 1rem;
     line-height: 1.5;
 }
 
 
-.icons{
+.icons-container{
+    background: #ffffff;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: 1rem;
-
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
+
+.icons-container .icons{
+    background: #fff;
+    border: 1rem solid rgba(0,0,0,.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons img{
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3{
+    color: var(--primary-color);
+    padding-bottom: 5rem;
+    font-size: 1,5rem;
+}
+
+.icons-container .icons span{
+    color: var(--secondary-color);
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+}
+
 
 .products .box-container{
     display: flex;
@@ -226,28 +254,7 @@ header{
     text-align: center;
 }
 
-product end
 
-
-
-
-body{
-    margin:0;
-    padding:0;
-    font-family:Arial, sans-serif;
-
-    background:linear-gradient(
-    to right,
-    #d4fc79,
-    #96e6a1
-    );
-
-    height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
 
 .login-box{
     background:white;
@@ -358,6 +365,8 @@ button:hover{
         display: block;
     }
 
+}
+
     .home .content h3{
         font-size: 5rem;
     }
@@ -366,10 +375,43 @@ button:hover{
         font-size: 2.5rem;
     }
 
-    header #toggler:checked ~ .navbar{
+.icons-container .icons h3{
+    font-size: 2rem;
+}
+
+.icons-container .icons span{
+    font-size: 1.7rem;
+}
+
+
+.products .box-container .box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0.5rem 1.5rem rgb(0, 0, 0);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    position: relative;
+}
+
+.products .box-container .box .content{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,.9);
+    padding: 1rem;
+    width: 90%;
+    border-radius: .5rem;
+}
+
+  header #toggler:checked ~ .navbar{
         max-height: 40rem;
     }
-}
 
 @media (max-width:450px){
 
@@ -380,29 +422,7 @@ button:hover{
     .heading{
         font-size: 3rem;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    l
 header{
     padding: 2rem;
 }
@@ -439,48 +459,62 @@ header{
     padding: 1rem 0;
     line-height: 1.5;
 }
-
-.footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
 }
 
-.footer .box-container .box{
-    flex:1 1 25rem;
+/* --- FOOTER SECTION START --- */
+.footer {
+    background: #fcfcfc; /* Warna background netral */
+    border-top: .1rem solid rgba(0,0,0,.1);
+    padding: 3rem 9%; /* Memberi ruang di sisi kiri & kanan */
 }
 
-.footer .box-container .box h3{
-    color: #225324;
-    font-size: 2.5rem;
-    padding:1rem 0;
+.footer .box-container {
+    display: grid;
+    /* Ubah dari 23rem ke 18rem agar kolom lebih ramping */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
+    gap: 1.5rem; /* Jarak antar box diperkecil */
 }
 
-.footer .box-container .box a{
+.footer .box-container .box h3 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    padding: 1.5rem 0;
+    font-weight: bold;
+}
+
+.footer .box-container .box a {
     display: block;
-    color: #225324;
+    color: #555;
     font-size: 1.5rem;
-    padding:1rem 0;
+    padding: 1rem 0;
+    transition: all .3s ease;
 }
 
-.footer .box-container .box a:hover{
-    color:var(--primary-color) 
+/* Efek saat link di-hover */
+.footer .box-container .box a:hover {
+    color: var(--secondary-color);
+    padding-left: 1rem; /* Efek geser kecil */
+    text-decoration: underline;
 }
 
-.footer .box-container .box img{
-    margin-top: 1rem;
-}
-
-.footer .credit{
+.footer .credit {
     text-align: center;
-    padding:1.5rem;
-    margin-top: 1.5rem;
-    padding-top: 2.5rem;
-    font-size: 2rem;
-    color:#225324;
+    padding: 2.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
     border-top: .1rem solid rgba(0,0,0,.1);
 }
-.footer .credit span{
-    color: #5b7e30;
+
+.footer .credit span {
+    color: var(--secondary-color);
+    font-weight: bold;
 }
+
+/* Responsif untuk layar Tablet/HP agar tidak sempit */
+@media (max-width: 768px) {
+    .footer .box-container {
+        /* Otomatis menyesuaikan kolom jika layar mengecil */
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
 }
