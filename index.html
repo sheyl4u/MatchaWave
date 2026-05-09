@@ -11,6 +11,30 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+<script>
+
+const cartBtn = document.getElementById('cart-btn');
+const cartSidebar = document.getElementById('cart-sidebar');
+
+cartBtn.onclick = (e) => {
+
+    e.preventDefault();
+
+    cartSidebar.classList.toggle('active');
+
+};
+
+</script>
+<div id="cart-sidebar">
+
+    <h2>Your Cart</h2>
+
+    <div class="cart-item">
+        <p>Matcha Latte</p>
+        <span>Rp 25.000</span>
+    </div>
+
+</div>
 <body>
     
 
@@ -35,11 +59,48 @@
 
     <div class="icons">
         <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="cart.html" id="cart-btn" class="fas fa-shopping-cart"></a>
+    <span class="cart-count">3</span>
+</a>
         <a href="#" class="fas fa-user"></a>
     </div>
 
 </header>
+<!-- CART SIDEBAR START -->
+
+<div class="cart-sidebar" id="cart-sidebar">
+
+    <h2>Your Cart</h2>
+
+    <div class="cart-item">
+        <img src="https://i.pinimg.com/736x/60/a5/61/60a561a10f3d775c1383394ec94bda64.jpg">
+
+        <div>
+            <h3>Matcha Latte</h3>
+            <p>Rp 25.000</p>
+        </div>
+    </div>
+
+    <div class="cart-item">
+        <img src="https://i.pinimg.com/736x/60/a5/61/60a561a10f3d775c1383394ec94bda64.jpg">
+
+        <div>
+            <h3>Matcha Ice Cream</h3>
+            <p>Rp 30.000</p>
+        </div>
+    </div>
+
+    <div class="total">
+        Total: Rp 55.000
+    </div>
+
+    <button class="checkout-btn">
+        Checkout
+    </button>
+
+</div>
+
+<!-- CART SIDEBAR END -->
 
 <!-- header section ends -->
 
@@ -288,6 +349,9 @@
 
 <!--footer section ends -->
 
+<script>
 
+
+</script>
 </body>
 </html>
