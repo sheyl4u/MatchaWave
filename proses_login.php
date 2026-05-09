@@ -1,21 +1,24 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "matchawave");
+$conn = mysqli_connect("localhost", "root", "", "mwc_login");
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+if (!$conn) {
+    die("Koneksi gagal");
+}
 
-$query = mysqli_query($conn,
-"SELECT * FROM users 
-WHERE username='$username' 
-AND password='$password'");
+$username = trim($_POST['username']);
+$password = trim($_POST['password']);
 
-$cek = mysqli_num_rows($query);
+$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 
-if($cek > 0){
+$query = mysqli_query($conn, $sql);
 
-    // balik ke website utama
+$data = mysqli_fetch_assoc($query);
+
+if($data){
+
     header("Location: index.html");
+    exit();
 
 }else{
 
